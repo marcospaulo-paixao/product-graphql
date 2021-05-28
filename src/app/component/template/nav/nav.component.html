@@ -1,0 +1,21 @@
+<mat-sidenav-container class="container" fullscreen>
+    <mat-sidenav #sidenav class="sidenav mat-elevation-z8" mode="side" opened fixedInViewport="true" fixedTopGap="64">
+        <mat-nav-list>
+            <mat-nav-list>
+                <ng-template ngFor let-button [ngForOf]="side_buttons">
+                    <ng-template [ngIf]="button.visible">
+                        <mat-nav-list>
+                            <a class="button-nav" mat-list-item [routerLink]="button.path" routerLinkActive="active">
+                                <i class="material-icons"> {{button.icon}} </i> {{button.name}}
+                            </a>
+                        </mat-nav-list>
+                    </ng-template>
+                </ng-template>
+            </mat-nav-list>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content class="content">
+        <router-outlet>
+        </router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

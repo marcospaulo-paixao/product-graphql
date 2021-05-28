@@ -1,0 +1,50 @@
+<div class="container">
+    <mat-card class="card-container mat-elevation-z4">
+        <h1>
+            Produtos
+        </h1>
+        <div class="card-form">
+            <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+                <mat-form-field appearance="fill">
+                    <mat-label>Categoria</mat-label>
+                    <mat-select formControlName='category' [compareWith]='compareObjects' required>
+                        <mat-option *ngFor="let category of categoryList" [value]="category">
+                            {{category.cat_name}}
+                        </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="isRequiredFieldValid('category')">
+                        Campo obrigatório
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Nome</mat-label>
+                    <input matInput name="titulo" formControlName='name' placeholder="Informe o nome da categoria" required/>
+                    <mat-error *ngIf="isRequiredFieldValid('name')">
+                        Campo obrigatório
+                    </mat-error>
+                    <mat-error *ngIf="isMinLengthFieldValid('name')">
+                        O nome dever ter no mínimo 2 caracteres
+                    </mat-error>
+                    <mat-error *ngIf="isMaxLengthFieldValid('name')">
+                        O nome dever ter no máximo 100 caracteres
+                    </mat-error>
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Preço</mat-label>
+                    <input matInput name="titulo" formControlName='price' type="number" min="0.00" step="0.01" placeholder="Informe o preço da categoria" required/>
+                    <mat-error *ngIf="isRequiredFieldValid('price')">
+                        Campo obrigatório
+                    </mat-error>
+                </mat-form-field>
+                <div>
+                    <button type="submit" class="button-save" mat-raised-button>
+                        Salvar
+                    </button>
+                    <button type="button" class="button-cancel" mat-raised-button routerLink="/product-list">
+                        Cancelar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </mat-card>
+</div>

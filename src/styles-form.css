@@ -1,0 +1,29 @@
+.card-container {
+    margin-top: 100px;
+}
+
+.card-form {
+    margin-top: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    margin: 15px auto 15px auto;
+    width: 500px;
+}
+
+.button-save {
+    margin: 15px 15px 0 0;
+    background-color: #595959;
+    color: white
+}
+
+.button-cancel {
+    margin: 15px 15px 0 0;
+    background-color: #919191;
+    color: white
+}

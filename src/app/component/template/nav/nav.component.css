@@ -1,0 +1,16 @@
+.sidenav {
+    background-color: grey !important;
+    width: 200px;
+}
+
+.button-nav {
+    color: white !important;
+}
+
+.sidenav i {
+    margin: 0 15px 0 0;
+}
+
+.container {
+    background-color: transparent;
+}

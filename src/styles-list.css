@@ -1,0 +1,29 @@
+.card {
+    margin: 100px 50px 20px 50px;
+}
+
+table {
+    width: 100%;
+}
+
+.card-title {
+    margin-bottom: 15px;
+}
+
+.table-container {
+    padding: 15px;
+}
+
+.button-add {
+    color: white;
+    background-color: grey;
+}
+
+.search {
+    width: 40%;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 6fr 1fr;
+}
